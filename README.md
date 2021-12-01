@@ -57,7 +57,7 @@ kill -s KILL node
 
 - [x] The specs for lab are screen shots Cookie Stand Admin Version 2 and Cookie Stand Admin No Stands
 - [x] pages/Index.js should return top level component <CookieStandAdmin>
-  <CookieStandAdmin> details…
+      <CookieStandAdmin> details…
   - [x] Will contain the following components:
     - [x] <Head>, <Header>, <main>, <CreateForm>, <ReportTable>, and<Footer> component that matches spec.
 - [x] Import time slot data from supplied data.js file.
@@ -68,6 +68,29 @@ kill -s KILL node
   - [x] If reports is not empty then render a table with thead,tbody and tfoot components.
 - [x] Components should render to match spec.
 - [x] Style all components using TailwindCSS utility classes to match spec
+
+# Version -3 :
+
+- [] All features from versions 1 an 2 should be complete.
+- [] The specs for lab are screen shots Cookie Stand Admin Version 3 and Cookie Stand Admin Login
+- [] pages/Index.js should export a <Home> component.
+- [] <Home> requirements
+  - [] If user is NOT logged in then <LoginForm> should render.
+  - [] If user IS logged in then <CookieStandAdmin> component should render.
+- [] <LoginForm> requirements
+  - [] Should receive a function passed in to call when form is submitted.
+  - [] The function should be called with username and password arguments.
+- [] <CookieStandAdmin> requirements
+  - [] When user fills out form to add location then the data should be posted to API
+  - [] While waiting for API response the <CookieStandTable> should render the new row in a pending state.
+  - [] When API response is complete then <CookieStandTable> should render latest data.
+    <CookieStandTable> requirements
+- [] Component should continue to display Cookie Stand info as in version 2
+- [] Add a delete icon in each stand’s location cell.
+- [] Clicking delete icon should immediately delete the Cookie Stand.
+  -[] In other words, it should NOT require a page refresh.
+- [] API should be informed that Cookie Stand was deleted.
+- [] Continue to style all components using TailwindCSS utility classes to match spec.
 
 ## Authors
 
