@@ -1,7 +1,7 @@
 import { createContext, useContext, useState } from "react";
 import jwt from "jsonwebtoken";
 import axios from "axios";
-const tokenUrl = 'http://cookie-stands-api-django.herokuapp.com/api/token/';
+const tokenUrl = 'https://cookie-stands-api-django.herokuapp.com/api/token/';
 
 const AuthContext = createContext();
 

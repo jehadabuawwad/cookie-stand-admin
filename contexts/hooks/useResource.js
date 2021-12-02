@@ -2,7 +2,7 @@ import axios from 'axios';
 import useSWR from 'swr';
 import { useAuth } from '../auth';
 
-export const apiUrl = 'http://cookie-stands-api-django.herokuapp.com/api/';
+export const apiUrl = 'https://cookie-stands-api-django.herokuapp.com/api/';
 
 export default function useResource() {
 
