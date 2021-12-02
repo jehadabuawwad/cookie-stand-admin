@@ -1,15 +1,15 @@
-import axios from 'axios'
-import useSWR from 'swr'
+import axios from 'axios';
+import useSWR from 'swr';
+import { useAuth } from '../auth';
 
-export const apiUrl = process.env.NEXT_PUBLIC_RESOURCE_URL;
-import { useAuth } from '../auth'
+export const apiUrl = 'http://cookie-stands-api-django.herokuapp.com/api/';
 
 export default function useResource() {
 
     const { tokens, logout } = useAuth()
-
+    
     const { data, error, mutate } = useSWR([apiUrl, tokens], fetchResource);
-
+    
     async function fetchResource(url) {
 
         if (!tokens) {
@@ -47,7 +47,7 @@ export default function useResource() {
         }
     }
 
-    async function updateResource(resource) {
+    async function updateResource() {
         // STRETCH
         // Add ability for user to update an existing resource
     }
@@ -85,4 +85,3 @@ export default function useResource() {
 This approach works, but it's not very snappy for the user.
 Check the SWR docs to see if you can "optomistically" render updated state while the API response is pending.
 */
-

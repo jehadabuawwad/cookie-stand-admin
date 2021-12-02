@@ -1,8 +1,7 @@
 import { createContext, useContext, useState } from "react";
 import jwt from "jsonwebtoken";
 import axios from "axios";
-const baseUrl = process.env.NEXT_PUBLIC_API_URL;
-const tokenUrl = baseUrl+"token/" ;
+const tokenUrl = 'https://cookie-stands-api-django.herokuapp.com/api/token/';
 
 const AuthContext = createContext();
 
@@ -18,16 +17,11 @@ export function AuthProvider(props) {
     user: null,
     login,
     logout,
-    addRow,
-    resetNewRow,
-    newRow: false,
   });
 
   async function login(username, password) {
     const response = await axios.post(tokenUrl, { username, password });
-
     const decodedAccess = jwt.decode(response.data.access);
-
     const newState = {
       tokens: response.data,
       user: {
@@ -48,18 +42,6 @@ export function AuthProvider(props) {
     setState((prevState) => ({ ...prevState, ...newState }));
   }
 
-  function addRow() {
-    const newState = {
-      newRow: true,
-    };
-    setState((prevState) => ({ ...prevState, ...newState }));
-  }
-  function resetNewRow() {
-    const newState = {
-      newRow: false,
-    };
-    setState((prevState) => ({ ...prevState, ...newState }));
-  }
   return (
     <AuthContext.Provider value={state}>{props.children}</AuthContext.Provider>
   );

@@ -1,3 +1,9 @@
-export default function Footer() {
-  return (<footer className="p-6 text-3xl bg-green-500">&copy;2021</footer>)
+const Footer = ({ stands }) => {
+  return (
+    <footer className='p-4' style={{ backgroundColor: '#15B981' }}>
+      <span>{`${stands ? Object.keys(stands).length : 0} locations world wild`}</span>
+    </footer>
+  )
 }
+
+export default Footer
