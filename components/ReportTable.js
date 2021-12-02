@@ -5,15 +5,15 @@ export default function ReportTable(props) {
   
   const [totals,setTotals]=useState(0)
   
-  useEffect(() => {
-    let totals = new Array(14).fill(0).map((item, index) =>
-      props.Locations
-        .map((item) => item.hourly_sales)
-        .map((val) => val[index])
-        .reduce((total, element) => total + element, 0),
-    )
-    setTotals(totals)
-  })
+  // useEffect(() => {
+  //   let totals = new Array(14).fill(0).map((item, index) =>
+  //     props.Locations
+  //       .map((item) => item.hourly_sales)
+  //       .map((val) => val[index])
+  //       .reduce((total, element) => total + element, 0),
+  //   )
+  //   setTotals(totals)
+  // })
 
   return (
     <>
