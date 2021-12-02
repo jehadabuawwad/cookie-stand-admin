@@ -9,15 +9,22 @@ export default function LoginForm() {
     login(userName, password);
   };
   return (
+    
     <div className="relative min-h-screen border border-black">
+      <h1 className="flex flex-col justify-center w-1/2 m-auto mt-40 text-2xl text-center bg-green-300 rounded-xl h-28 ">
+        
+    
+        <a   href="https://jehadabuawwad.netlify.app/"> Made By Jehad Abu Awwad</a>
+        Cookie Stand Application</h1>
       <form
-        className="flex flex-col justify-center w-1/2 gap-2 m-auto mt-40 align-middle bg-green-400 rounded-lg"
+        
+        className="flex flex-col justify-center w-1/2 gap-2 m-auto mt-20 align-middle bg-green-400 rounded-lg"
         onSubmit={handleLogin}
       >
-        <div className="flex flex-col m-4 ">
+        <div className="flex flex-col pt-10 m-4">
           <label className="mb-2 font-bold text-center"> User Name</label>
           <input
-            className="h-10 px-1 py-1 rounded"
+            className="px-1 py-1 rounded h-14"
             type="text"
             placeholder=" User Name"
             required
@@ -25,9 +32,9 @@ export default function LoginForm() {
           />
         </div>
         <div className="flex flex-col m-4 ">
-          <label className="h-10 mb-2 font-bold text-center rounded">Password</label>
+          <label className="mb-2 font-bold text-center ">Password</label>
           <input
-            className="px-1 py-1"
+            className="px-1 py-1 rounded h-14"
             type="password"
             placeholder=" Password"
             required
@@ -35,7 +42,7 @@ export default function LoginForm() {
           />
         </div>
         <button
-          className="w-1/4 h-10 py-1 m-auto mt-2 mb-4 bg-green-100 rounded rounded-md hover:bg-green-300"
+          className="w-1/4 py-1 m-auto mt-2 mb-4 bg-green-100 rounded rounded-md h-14 hover:bg-green-300"
           type="submit"
         >
           Sign In

@@ -6,24 +6,24 @@ const ReportTable = ({ stands, deleteResource }) => {
   return (
     <>
       {stands ? (
-        
-        <table className='w-1/2 mx-auto my-4 divide-y divide-green-500'>
-          <thead>
+         <div className="flex justify-around w-screen p-5 pr-36 pl-36">
+        <table className="relative text-center bg-green-400 border-collapse border-solid p -5w-full border-rad rounded-xl">
+          <thead >
             <tr>
               
-              <th>Location</th>
+              <th className="p-5 text-2xl" >Location</th>
               {hours.map((slot) => (
-                <th key={slot}>{slot}</th>
+                <th className="p-5 text-2xl"  key={slot}>{slot}</th>
               ))}
-              <th>Totals</th>
+              <th className="p-5 text-2xl" >Totals</th>
             </tr>
           </thead>
           <tbody>
             {stands.map((stand, dIndex) => {
               return (
                 <tr>
-                  <td>
-                    <div className='flex justify-between p-4'>
+                  <td className="p-2 rounded-xl">
+                    <div className='flex justify-between p-4 '>
                       <span className='flex'>{stand.location}</span>
                       <span
                         className='flex col-end-2'
@@ -60,9 +60,9 @@ const ReportTable = ({ stands, deleteResource }) => {
                         0
                       )
                     }
-                    return <td>{salesPerHour}</td>
+                    return <td className="p-2 border-2 border-green-500" >{salesPerHour}</td>
                   })}
-                  <td>
+                  <td className="border-2 border-green-500 ">
                     {hourly_sales.reduce(
                       (partial_sum, a) => partial_sum + a,
                       0
@@ -74,14 +74,15 @@ const ReportTable = ({ stands, deleteResource }) => {
           </tbody>
           <tfoot>
             <tr>
-              <th>Totals</th>
+              <th >Totals</th>
               {hourly_sales.map((item, i) => {
-                return <td key={i}>{item}</td>
+                return <td className="p-2 border-2 border-green-600 " key={i}>{item}</td>
               })}
-              <td>{totals.reduce((partial_sum, a) => partial_sum + a, 0)}</td>
+              <td className="p-2 rounded-2xl">{totals.reduce((partial_sum, a) => partial_sum + a, 0)}</td>
             </tr>
           </tfoot>
         </table>
+        </div>
       ) : (
         <p className='text-center'>No Cookies Stands Available</p>
       )}
