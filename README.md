@@ -17,6 +17,14 @@ VS Code
 - Next.js
 - tailwindcss
 
+<hr>
+
+## **Authentation Information for testing**
+
+### **username : test**
+### **password : test**
+
+<hr>
 ## Getting Started
 
 Clone this repository to your local machine.
