@@ -1,4 +1,4 @@
-## REACT App
+## React Next.js based App
 
 ## Cookie Stand Admin
 
@@ -6,7 +6,7 @@
 
 ---
 
-# Deployment Link : [Cookies](https://cookies-stand.netlify.app/) 
+# Deployment Link : [Cookies](https://cookies-stand.netlify.app/)
 
 ## Tools Used
 
@@ -22,9 +22,11 @@ VS Code
 ## **Authentation Information for testing**
 
 ### **username : test**
+
 ### **password : test**
 
 <hr>
+
 ## Getting Started
 
 Clone this repository to your local machine.
@@ -94,11 +96,10 @@ kill -s KILL node
   - [x] When user fills out form to add location then the data should be posted to API
   - [x] While waiting for API response the <CookieStandTable> should render the new row in a pending state.
   - [x] When API response is complete then <CookieStandTable> should render latest data.
-    <CookieStandTable> requirements
+        <CookieStandTable> requirements
 - [x] Component should continue to display Cookie Stand info as in version 2
 - [x] Add a delete icon in each stand’s location cell.
-- [x] Clicking delete icon should immediately delete the Cookie Stand.
-  -[x] In other words, it should NOT require a page refresh.
+- [x] Clicking delete icon should immediately delete the Cookie Stand. -[x] In other words, it should NOT require a page refresh.
 - [x] API should be informed that Cookie Stand was deleted.
 - [x] Continue to style all components using TailwindCSS utility classes to match spec.
 
